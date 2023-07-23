@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <title>Option Pricer</title>
+</head>
+<body>
+    <form action="/" method="post">
+
+        <!-- <input type="text" class="form-control" name="S" required> -->
+        <input type="number" class="form-control" name="S" required min="1">
+
+        <!-- <button type="submit" class="btn btn-primary">Calculate</button> -->
+        <button type="submit" class="btn btn-primary animate__animated animate__fadeIn">Calculate</button>
+
+        <!-- S: <input type="text" name="S"><br> --> 
+        K: <input type="text" name="K"><br>
+        T: <input type="text" name="T"><br>
+        r: <input type="text" name="r"><br>
+        sigma: <input type="text" name="sigma"><br>
+        <input type="submit" value="Calculate">
+    </form>
+    {% if price %}
+        <p>Call option price: {{ price }}</p>
+    {% endif %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
